@@ -25,24 +25,20 @@ Tailwind
 غیرفعال بودن دکمه ارسال تا زمانی که فرم معتبر باشد
 نمایش اطلاعات فرم در یک مودال پس از ارسال موفق
 دکمه ریست برای پاک‌سازی تمام فیلدها
-ذخیره‌سازی اطلاعات فرم در 
-localStorage (چالش اختیاری)
+ذخیره‌سازی اطلاعات فرم در localStorage (چالش اختیاری)
 
 
 نحوه نصب و اجرا
-
 ابتدا ریپو را کلون کنید:
 
 git clone https://github.com/your-username/user-registration-form.git
-cd user-registration-form
+
 
 سپس پکیج‌ها را نصب کنید:
-
 npm install
 
 
 و در نهایت پروژه را اجرا کنید:
-
 npm run dev
 
 
