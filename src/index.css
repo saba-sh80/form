@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.mood {
+  background: hsla(253, 100%, 85%, 1);
+  background: linear-gradient(90deg, hsla(253, 100%, 85%, 1) 15%, hsla(253, 100%, 85%, 1) 57%, hsla(342, 72%, 85%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(253, 100%, 85%, 1) 15%, hsla(253, 100%, 85%, 1) 57%, hsla(342, 72%, 85%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(253, 100%, 85%, 1) 15%, hsla(253, 100%, 85%, 1) 57%, hsla(342, 72%, 85%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#C4B4FF", endColorstr="#C4B4FF", GradientType=1);
+}
