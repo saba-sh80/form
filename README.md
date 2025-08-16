@@ -1,70 +1,66 @@
-# React + TypeScript + Vite
+فرم ثبت نام کاربر
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+این پروژه برای کارآموزی فرانت‌اند طراحی شده و با استفاده از React، TypeScript، React Hook Form، Zod و کامپوننت‌های 
+ShadCN/UI و کلاس های 
+Tailwind
+ساخته شده است.  
 
-Currently, two official plugins are available:
+تکنولوژی‌های استفاده‌شده
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React + TypeScript  
+- React Hook Form  
+- Zod (برای اعتبارسنجی اسکما)  
+- ShadCN/UI (برای طراحی رابط کاربری)
 
-## Expanding the ESLint configuration
+ویژگی‌های فرم
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+نام کامل (حداقل ۳ کاراکتر)
+ایمیل (فرمت معتبر)
+رمز عبور (حداقل ۸ کاراکتر، شامل حداقل یک عدد و یک حرف بزرگ)
+تأیید رمز عبور (باید با رمز عبور برابر باشد)
+سن (اختیاری، اگر وارد شود باید بین ۱۸ تا ۱۰۰ باشد)
+نقش (انتخاب از بین: کاربر، مدیر، ناظر)
+پذیرش قوانین و شرایط (اجباری)
+نمایش خطاهای اعتبارسنجی به‌صورت لحظه‌ای
+غیرفعال بودن دکمه ارسال تا زمانی که فرم معتبر باشد
+نمایش اطلاعات فرم در یک مودال پس از ارسال موفق
+دکمه ریست برای پاک‌سازی تمام فیلدها
+ذخیره‌سازی اطلاعات فرم در 
+localStorage (چالش اختیاری)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+نحوه نصب و اجرا
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+ابتدا ریپو را کلون کنید:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+git clone https://github.com/your-username/user-registration-form.git
+cd user-registration-form
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+سپس پکیج‌ها را نصب کنید:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-"# form" 
+npm install
+
+
+و در نهایت پروژه را اجرا کنید:
+
+npm run dev
+
+
+ساختار پروژه
+
+src/
+├── components/
+│   └── ui/         # کامپوننت‌های رابط کاربری ShadCN
+├── lib/
+│   └── schema.ts   # اسکمای اعتبارسنجی Zod
+├── App.tsx         # منطق اصلی فرم
+└── index.css       # استایل‌های کلی
+
+
+توضیح روند پیاده‌سازی
+
+- استفاده از کامپوننت‌های آماده ShadCN برای طراحی مدرن
+- استفاده از react-hook-form برای مدیریت وضعیت فرم
+- تعریف تمام اعتبارسنجی‌ها در اسکمای Zod
+- ذخیره‌سازی اطلاعات فرم در localStorage برای حفظ داده‌ها
+
