@@ -31,8 +31,9 @@ Tailwind
 نحوه نصب و اجرا
 ابتدا ریپو را کلون کنید:
 
-git clone https://github.com/your-username/user-registration-form.git
-cd form
+.git clone https://github.com/your-username/user-registration-form.git
+
+.cd form
 
 سپس پکیج‌ها را نصب کنید:
 npm install
